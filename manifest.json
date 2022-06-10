@@ -1,0 +1,29 @@
+{
+  "files": {
+    "name": "app",
+    "short_name": "app",
+    "start_url": "index.html",
+    "display": "standalone",
+    "icons": [
+      {
+        "src": "favicon.ico",
+        "sizes": "512x512",
+        "type": "image/x-icon"
+      }
+    ],
+    "background_color": "#4e0041",
+    "theme_color": "#4e0041",
+    "main.css": "/react-webpack-boilerplate/assets/css/main.073808904db2158bb7b1.css",
+    "main.js": "/react-webpack-boilerplate/assets/js/main.07380890.bundle.js",
+    "assets/js/131.f30db27a.js": "/react-webpack-boilerplate/assets/js/131.f30db27a.js",
+    "assets/js/693.d1caad84.bundle.js": "/react-webpack-boilerplate/assets/js/693.d1caad84.bundle.js",
+    "favicon.ico": "/react-webpack-boilerplate/favicon.ico",
+    "index.html": "/react-webpack-boilerplate/index.html",
+    "locales/en/translations.json": "/react-webpack-boilerplate/locales/en/translations.json"
+  },
+  "entrypoints": [
+    "assets/js/693.d1caad84.bundle.js",
+    "assets/css/main.073808904db2158bb7b1.css",
+    "assets/js/main.07380890.bundle.js"
+  ]
+}
