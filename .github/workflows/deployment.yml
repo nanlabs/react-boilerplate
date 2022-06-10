@@ -1,0 +1,54 @@
+name: Deployment to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    concurrency: react-webpack-boilerplate
+
+    steps:
+      - name: Begin CI...
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+
+      - name: Use Node ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.13.1'
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - uses: actions/cache@v3
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install dependencies without generating a lockfile and fail if an update is needed
+        run: yarn --frozen-lockfile
+
+      - name: Make envfile
+        uses: SpicyPizza/create-envfile@v1
+        with:
+          file_name: .env.production
+
+      - name: Build page
+        run: yarn build
+        env:
+          PUBLIC_URL: /react-webpack-boilerplate
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
