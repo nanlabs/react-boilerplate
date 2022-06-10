@@ -1,15 +1,15 @@
 FROM node:16.13 as development
 WORKDIR /usr/src/app
 COPY . .
-RUN yarn
+RUN npm run
 EXPOSE 3000
-CMD [ "yarn", "start" ]
+CMD [ "npm run", "start" ]
 
 
 FROM development as builder
 WORKDIR /usr/src/app
 COPY . .
-RUN yarn && yarn build
+RUN npm run && npm run build
 
 
 FROM nginx:1.13.12-alpine as production

@@ -47,14 +47,14 @@
   "lint-staged": {
     "*.{js,jsx}": [
       "prettier --write",
-      "yarn lint:fix"
+      "npm run lint:fix"
     ],
     "*.{json,css,sass,scss,less,html,md,yml,yaml}": [
       "prettier --write"
     ],
     "*.{ts,tsx}": [
       "prettier --write",
-      "yarn lint:fix",
+      "npm run lint:fix",
       "git add"
     ]
   },
