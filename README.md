@@ -1,4 +1,17 @@
-# app Frontend
+<div align="center">
+<h1>React Webpack Boilerplate</h1>
+
+</div>
+<div align="center">
+
+[![Main Validation](https://github.com/nanlabs/react-webpack-boilerplate/actions/workflows/ci.yml/badge.svg)](https://github.com/nanlabs/react-webpack-boilerplate/actions/workflows/ci.yml)
+[![Deployment to GitHub Pages](https://github.com/nanlabs/react-webpack-boilerplate/actions/workflows/deployment.yml/badge.svg)](https://github.com/nanlabs/react-webpack-boilerplate/actions/workflows/deployment.yml)
+[![License: MIT][licensebadge]][licenseurl]
+
+[licensebadge]: https://img.shields.io/badge/License-MIT-blue.svg
+[licenseurl]: https://github.com/vlang/nanlabs/react-webpack-boilerplate/master/LICENSE
+
+</div>
 
 This project was generated using [React Webpack Starter](https://github.com/Create-Node-App/create-react-webpack-app).
 
@@ -9,29 +22,24 @@ This project was generated using [React Webpack Starter](https://github.com/Crea
 Start development environment running
 
 ```sh
-$ yarn start
-# or with npm
 $ npm run start
 ```
 
 Start development environment with docker running
 
 ```sh
-$ yarn docker:dev
-# or with npm
 $ npm run docker:dev
 ```
 
 `docker:dev` generate a docker image named app and run it in a container. Run `docker:dev:start` for only start a container without build a new docker image
 
-While developing, you will probably rely mostly on `yarn start`; however, there are additional scripts at your disposal:
+While developing, you will probably rely mostly on `npm run start`; however, there are additional scripts at your disposal:
 
-| `yarn <script>`       | Description                                                                                                             |
+| `npm run <script>`    | Description                                                                                                             |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | `start`               | Serves your app at `localhost:3000`                                                                                     |
 | `build:dev`           | Builds the application to ./build (_the build output dir could be configured in `./config/common-paths.js`_)            |
 | `build:dev:watch`     | Builds the application and watch for changes                                                                            |
-| `build:dev:analyze`   | Builds the application with Bundle Analyzer and Visualizer Plugins instaled                                             |
 | `build:dev:dashboard` | Builds the application with Dashboard                                                                                   |
 | `serve:dev:dashboard` | Builds the application with Dashboard                                                                                   |
 | `test`                | Runs unit tests with Jest. See [testing](#testing)                                                                      |
@@ -50,18 +58,23 @@ For **JavaScript** modules, a code change will trigger the application to re-ren
 Generate production files running
 
 ```sh
-$ yarn build
-# or with npm
 $ npm run build
 ```
 
 Generate and serve production files running
 
 ```sh
-$ yarn serve
-# or with npm
 $ npm run serve
 ```
+
+Available scripts:
+
+| `npm run <script>` | Description                                                                                                                     |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
+| `serve`            | Serves your app at `localhost:3000` using your production ready setup (`.env.production` and `NODE_ENV` equals to `production`) |
+| `build`            | Builds the application to ./build (_the build output dir could be configured in `./config/common-paths.js`_)                    |
+| `build:analyze`    | Builds the application with Bundle Analyzer Plugins instaled                                                                    |
+| `build:visualyze`  | Builds the application with Bunle Visualizer Plugins instaled                                                                   |
 
 ## Project Structure
 

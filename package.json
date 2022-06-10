@@ -23,8 +23,8 @@
     "build:analyze": "npm run build --env addon=bundleanalyze",
     "build:visualize": "npm run build --env addon=bundlevisualizer",
     "build:watch": "npm run build --watch",
-    "lint": "prettier --ignore-path .eslintignore --check \"**/*.{js,jsx,ts,tsx,json,css,sass,scss,less,html,md}\" && eslint src",
-    "lint:fix": "prettier --ignore-path .eslintignore --write \"**/*.{js,jsx,ts,tsx,json,css,sass,scss,less,html,md}\" && eslint src --fix",
+    "lint": "prettier --ignore-path .eslintignore --check \"**/*.{js,jsx,ts,tsx,json,css,sass,scss,less,html,md,yml,yaml}\" && eslint src",
+    "lint:fix": "prettier --ignore-path .eslintignore --write \"**/*.{js,jsx,ts,tsx,json,css,sass,scss,less,html,md,yml,yaml}\" && eslint src --fix",
     "serve:dev": "webpack-dev-server --mode development --open --env env=development",
     "serve:dev:dashboard": "webpack-dashboard webpack-dev-server -- --mode development --env addon=dashboard",
     "start": "npm run serve:dev",
@@ -49,7 +49,7 @@
       "prettier --write",
       "yarn lint:fix"
     ],
-    "*.{json,css,sass,scss,less,html,md}": [
+    "*.{json,css,sass,scss,less,html,md,yml,yaml}": [
       "prettier --write"
     ],
     "*.{ts,tsx}": [
