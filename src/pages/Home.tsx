@@ -4,10 +4,10 @@ import Cracked from 'components/Animation/Cracked';
 import './Landing.css';
 import { useTranslation } from 'react-i18next';
 
-const Landing = () => {
-  const { t } = useTranslation('config');
+const Home = () => {
+  const { t } = useTranslation();
 
-  return <Cracked>{t('app.title')}</Cracked>;
+  return <Cracked>{t('brand')}</Cracked>;
 };
 
-export default Landing;
+export default Home;

@@ -24,7 +24,7 @@ i18n
     },
 
     // have a common namespace used around the full app
-    ns: ['translations'],
+    ns: ['translations', 'config'],
     defaultNS: 'translations',
 
     debug: process.env.NODE_ENV === 'development',

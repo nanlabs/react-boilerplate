@@ -50,28 +50,26 @@ const config = {
     new WebpackManifestPlugin({
       publicPath: `${URL_BASE}/`,
       seed: {
-        name: "app",
-        short_name: "app",
-        start_url: "index.html",
-        display: "standalone",
+        name: 'app',
+        short_name: 'app',
+        start_url: 'index.html',
+        display: 'standalone',
         icons: [
           {
-            src: "favicon.ico",
-            sizes: "512x512",
-            type: "image/x-icon"
-          }
+            src: 'favicon.ico',
+            sizes: '512x512',
+            type: 'image/x-icon',
+          },
         ],
-        background_color: "#4e0041",
-        theme_color: "#4e0041"
+        background_color: '#4e0041',
+        theme_color: '#4e0041',
       },
       generate: (seed, files, entrypoints) => {
         const manifestFiles = files.reduce((manifest, file) => {
           manifest[file.name] = file.path;
           return manifest;
         }, seed);
-        const entrypointFiles = entrypoints.main.filter(
-          fileName => !fileName.endsWith('.map')
-        );
+        const entrypointFiles = entrypoints.main.filter((fileName) => !fileName.endsWith('.map'));
 
         return {
           files: manifestFiles,
@@ -85,9 +83,8 @@ const config = {
           from: commonPaths.favicon,
           to: commonPaths.outputPath,
         },
-      ]
+      ],
     }),
-    new webpack.HotModuleReplacementPlugin(),
   ],
 };
 
