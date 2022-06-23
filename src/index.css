@@ -13,14 +13,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.app {
+#app {
   display: flex;
   position: relative;
   min-height: 100%;
   width: 100%;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
+  background-color: #fefefe;
 }

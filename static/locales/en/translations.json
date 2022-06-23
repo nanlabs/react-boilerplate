@@ -1,3 +1,9 @@
 {
-  "brand": "NaNLabs"
+  "brand": "NaNLabs",
+  "header": {
+    "howItWorks": "How it Works",
+    "integrations": "Integrations",
+    "pricing": "Pricing",
+    "aboutUs": "About Us"
+  }
 }
