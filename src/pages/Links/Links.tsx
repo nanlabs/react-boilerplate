@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { Routes, generatePath } from 'routes/Routes';
 import { Link } from 'react-router-dom';
+import DefaultLayout from 'layouts/Default';
 
 const links = [
   {
@@ -23,13 +24,13 @@ const links = [
 
 const Links: FC = () => {
   return (
-    <div>
+    <DefaultLayout>
       {links.map((link) => (
         <li key={link.path}>
           <Link to={link.path}>{link.name}</Link>
         </li>
       ))}
-    </div>
+    </DefaultLayout>
   );
 };
 

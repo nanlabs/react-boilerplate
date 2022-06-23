@@ -1,18 +1,18 @@
 import React, { FC } from 'react';
 import Cracked from 'components/Animation/Cracked';
 
-import './styles.css';
+import { Root, AnimationContainer } from './styles';
 
 export interface FullScreenAnimationProps {
   children?: React.ReactNode;
 }
 
 const FullScreenAnimation: FC<FullScreenAnimationProps> = ({ children }) => (
-  <div className="fullscreen-animation-root">
-    <div className="fullscreen-animation-container">
+  <Root>
+    <AnimationContainer>
       <Cracked>{children}</Cracked>
-    </div>
-  </div>
+    </AnimationContainer>
+  </Root>
 );
 
 export default FullScreenAnimation;

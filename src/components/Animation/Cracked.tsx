@@ -1,11 +1,16 @@
 import React, { FC } from 'react';
 
+/**
+ * This component is an example to show that the project setup
+ * can interpret .less .sass .scss files
+ */
+
 import './slicer.scss';
 import './cracked.css';
 
-export interface CrackedProps {
+export type CrackedProps = {
   children?: React.ReactNode;
-}
+};
 
 const Cracked: FC<CrackedProps> = ({ children }) => (
   <div className="bg-text">

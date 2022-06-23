@@ -1,9 +1,15 @@
 import React from 'react';
 import { useParams } from 'react-router';
+import DefaultLayout from 'layouts/Default';
 
 const UserDetail = () => {
   const { userId } = useParams();
-  return <div>hello {userId}</div>;
+
+  return (
+    <DefaultLayout>
+      <div>hello {userId}</div>
+    </DefaultLayout>
+  );
 };
 
 export default UserDetail;
