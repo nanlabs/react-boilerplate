@@ -18,4 +18,11 @@ const AppRoutes: FC = () => (
   </Routes>
 );
 
+/**
+ * Another way to implement 404 with redirection is:
+ * import { Route, Routes, Navigate } from 'react-router-dom';
+ * <Route path="/404" element={<NotFound />} />
+ * <Route path="*" element={<Navigate replace to="/404" />} />
+ */
+
 export default AppRoutes;
