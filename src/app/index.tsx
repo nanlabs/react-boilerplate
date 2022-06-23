@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React, { FC, Suspense } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
 import 'theme';
@@ -6,7 +6,7 @@ import 'theme';
 import Loading from 'components/Loading';
 import AppRoutes from 'routes/AppRoutes';
 
-const App = () => (
+const App: FC = () => (
   <Suspense fallback={<Loading />}>
     <BrowserRouter>
       <AppRoutes />

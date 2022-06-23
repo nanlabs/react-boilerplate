@@ -17,7 +17,7 @@ $fontSize: 8rem;
 
       &:nth-child(#{$key}) {
         $row: floor($i / 20);
-        color: rgba(255 - $key * 2, 50 - $key / 2, $key * 3, 1);
+        color: rgba(30 - $key * 2, 255 - $key * 2, 233 - $key * 2, 1);
         clip-path: polygon(
           floor($i / 2) * 10% - $row * 100% $row * 50%,
           floor($key / 2) * 10% - $row * 100% ceil($key % 2) * 50% + ($row * 50%),
