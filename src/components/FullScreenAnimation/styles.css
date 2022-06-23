@@ -1,0 +1,14 @@
+.fullscreen-animation-root {
+  background: linear-gradient(to right top, rgb(0, 18, 143) 0%, rgb(49, 57, 193) 51%, rgb(111, 100, 245) 100%);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  perspective: 800px;
+}
+
+.fullscreen-animation-container {
+  display: flex;
+}
