@@ -4,7 +4,7 @@ import { createRoot } from 'react-dom/client';
 import 'i18n';
 import * as serviceWorker from 'service-worker';
 import reportWebVitals from 'report-web-vitals';
-import App from 'app/app';
+import App from './App';
 
 const root = createRoot(document.getElementById('app') as HTMLElement);
 root.render(
