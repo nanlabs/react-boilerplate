@@ -6,6 +6,7 @@ import useScroll from 'hooks/useScroll';
 import { Link, NavLink } from 'react-router-dom';
 import { Routes } from 'routes/Routes';
 import Button from 'components/Button';
+import Sparkles from 'components/Sparkles';
 
 const Header: FC = () => {
   const { t } = useTranslation(['config', 'translations']);
@@ -27,9 +28,11 @@ const Header: FC = () => {
           <NavItem>{t('header.aboutUs', { ns: 'translations' })}</NavItem>
         </NavList>
 
-        <NavLink to={Routes.POWERED}>
-          <Button>Powered</Button>
-        </NavLink>
+        <Sparkles colors={['#FFC700', '#22d0b6', '#22d0b6', '#80a6e9', '#f280b9', '#e35da0', '#0cea86']}>
+          <NavLink to={Routes.POWERED}>
+            <Button>Powered</Button>
+          </NavLink>
+        </Sparkles>
       </Nav>
     </FixedContainer>
   );

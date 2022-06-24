@@ -5,7 +5,6 @@ import 'i18n';
 import * as serviceWorker from 'service-worker';
 import reportWebVitals from 'report-web-vitals';
 import App from 'app/app';
-import './index.css';
 
 const root = createRoot(document.getElementById('app') as HTMLElement);
 root.render(
