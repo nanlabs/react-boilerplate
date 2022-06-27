@@ -7,12 +7,14 @@ import UserDetail from 'pages/UserDetail';
 import LinksExamples from 'pages/Links';
 import Powered from 'pages/Powered';
 import NotFound from 'pages/404';
+import ApiExample from 'pages/ApiExample';
 
 const AppRoutes: FC = () => (
   <Routes>
     <Route path={RouteMap.ROOT} element={<Landing />} />
     <Route path={RouteMap.POWERED} element={<Powered />} />
     <Route path={RouteMap.LINKS_EXAMPLES} element={<LinksExamples />} />
+    <Route path={RouteMap.API_EXAMPLES} element={<ApiExample />} />
     <Route path={RouteMap.USER_DETAIL} element={<UserDetail />} />
     <Route path="*" element={<NotFound />} />
   </Routes>

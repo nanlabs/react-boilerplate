@@ -5,12 +5,15 @@ import 'theme';
 
 import Loading from 'components/Loading';
 import AppRoutes from 'routes/AppRoutes';
+import ReactQueryProvider from 'providers/ReactQueryProvider';
 
 const App: FC = () => (
   <Suspense fallback={<Loading />}>
-    <BrowserRouter>
-      <AppRoutes />
-    </BrowserRouter>
+    <ReactQueryProvider>
+      <BrowserRouter>
+        <AppRoutes />
+      </BrowserRouter>
+    </ReactQueryProvider>
   </Suspense>
 );
 
