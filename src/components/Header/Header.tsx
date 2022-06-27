@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { FixedContainer, Nav, Brand, NavList, NavItem } from './styles';
+import { FixedContainer, Nav, NavContainer, Brand, NavList, NavItem } from './styles';
 import { useTranslation } from 'react-i18next';
 import useScroll from 'hooks/useScroll';
 import { Link, NavLink } from 'react-router-dom';
@@ -14,24 +14,28 @@ const Header: FC = () => {
   return (
     <FixedContainer>
       <Nav condensed={isFixed}>
-        <Link to={Routes.ROOT}>
-          <Brand src={logo} alt={t('app.title', { ns: 'config' })} />
-        </Link>
+        <NavContainer>
+          <Link to={Routes.ROOT}>
+            <Brand src={logo} alt={t('app.title', { ns: 'config' })} />
+          </Link>
 
-        <NavList>
-          <NavItem>
-            <NavLink to={Routes.LINKS_EXAMPLES}>{t('header.howItWorks', { ns: 'translations' })}</NavLink>
-          </NavItem>
-          <NavItem>{t('header.integrations', { ns: 'translations' })}</NavItem>
-          <NavItem>{t('header.pricing', { ns: 'translations' })}</NavItem>
-          <NavItem>{t('header.aboutUs', { ns: 'translations' })}</NavItem>
-        </NavList>
+          <NavList>
+            <NavItem>
+              <NavLink to={Routes.LINKS_EXAMPLES}>{t('header.howItWorks', { ns: 'translations' })}</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink to={Routes.API_EXAMPLES}>{t('header.integrations', { ns: 'translations' })}</NavLink>
+            </NavItem>
+            <NavItem>{t('header.pricing', { ns: 'translations' })}</NavItem>
+            <NavItem>{t('header.aboutUs', { ns: 'translations' })}</NavItem>
+          </NavList>
 
-        <Sparkles colors={['#FFC700', '#22d0b6', '#22d0b6', '#80a6e9', '#f280b9', '#e35da0', '#0cea86']}>
-          <NavLink to={Routes.POWERED}>
-            <Button>Powered</Button>
-          </NavLink>
-        </Sparkles>
+          <Sparkles colors={['#FFC700', '#22d0b6', '#22d0b6', '#80a6e9', '#f280b9', '#e35da0', '#0cea86']}>
+            <NavLink to={Routes.POWERED}>
+              <Button>Powered</Button>
+            </NavLink>
+          </Sparkles>
+        </NavContainer>
       </Nav>
     </FixedContainer>
   );

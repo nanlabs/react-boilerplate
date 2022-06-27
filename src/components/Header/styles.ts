@@ -17,14 +17,21 @@ type NavProps = {
 export const Nav = styled.nav<NavProps>`
   display: flex;
   flex: 1;
-  align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   color: black;
   background-color: #fefefe;
-  max-width: 1240px;
   transition: all 0.2s ease-in-out 0s;
-  padding: ${({ condensed }) => (condensed ? '20px' : '60px 20px')};
+  padding: ${({ condensed }) => (condensed ? '20px 0' : '60px 20px')};
   box-shadow: ${({ condensed }) => (condensed ? '0 2px 10px 0 rgba(36, 50, 66, 0.075)' : 'none')};
+`;
+
+export const NavContainer = styled.div`
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 1240px;
+  padding: 0 20px;
 `;
 
 export const Brand = styled.img`
