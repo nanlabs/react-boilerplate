@@ -99,8 +99,6 @@ const config = {
       app: commonPaths.sourcePath,
       react: path.resolve(__dirname, '../', 'node_modules/react'),
       'app-assets': path.resolve(__dirname, '../', 'static/'),
-      '../../theme.config$': path.resolve(__dirname, '../', 'src/theme/semantic-ui/theme.config'),
-      heading: path.resolve(__dirname, '../', 'src/semantic/heading.less'),
     },
     modules: ['.', 'node_modules'],
   },
