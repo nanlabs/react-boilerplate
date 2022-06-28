@@ -84,17 +84,28 @@ Available scripts:
 
 ```
 .
-├── config                   # Webpack and Jest configuration
+├── build                    # Production build, result of `npm run build`
+├── config                    # Webpack and Jest configuration
 ├── public                   # Static public assets (not imported anywhere in source code)
 │   └── index.html           # Main HTML page template for app
 ├── src                      # Application source code
 │   ├── components           # Global Reusable Components
+│   ├── hooks                # Reusable React hooks
+│   ├── layouts              # Reusable React layout components for `page components`
+│   ├── libs                 # Clients and Libs global configuration for example http client
+│   │   └── http
 │   ├── pages                # Components associated with routes
+│   ├── providers            # React Providers components charge to share global dependencies (DI)
 │   ├── routes               # Main route definitions and async split points
-│   │   └── AppRoutes.jsx    # Bootstrap main application routes
+│   │   └── AppRoutes.tsx    # Bootstrap main application routes
+│   │   ├── Routes.ts        # Constant files for unique URL path and pattern 
+│   ├── services             # Services that the app consumes
 │   ├── theme                # Application-wide styles and theme
+│   ├── utils                # Utility functions
+│   │   └── test             # Utility test and config functions  
 |   ├── ...
-|   ├── index.jsx            # Application bootstrap and rendering with store
+|   ├── index.tsx            # Application bootstrap
+|   ├── app.tsx              # Entry point rendering
 └── static                   # Static public assets imported anywhere in source code
 ```
 

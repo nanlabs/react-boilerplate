@@ -25,6 +25,9 @@ const links = [
 const Links: FC = () => {
   return (
     <DefaultLayout>
+      <h1>This is an example page</h1>
+      <h3>In this section we show how to generate links and dynamic links</h3>
+      <hr></hr>
       {links.map((link) => (
         <li key={link.path}>
           <Link to={link.path}>{link.name}</Link>

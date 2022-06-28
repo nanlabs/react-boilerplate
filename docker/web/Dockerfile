@@ -1,15 +1,15 @@
 FROM node:16.13 as development
 WORKDIR /usr/src/app
 COPY . .
-RUN npm run
+RUN npm install
 EXPOSE 3000
-CMD [ "npm run", "start" ]
+CMD [ "npm", "start" ]
 
 
 FROM development as builder
 WORKDIR /usr/src/app
 COPY . .
-RUN npm run && npm run build
+RUN npm install && npm run build
 
 
 FROM nginx:1.13.12-alpine as production
