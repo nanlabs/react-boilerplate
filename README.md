@@ -98,11 +98,11 @@ Available scripts:
 │   ├── providers            # React Providers components charge to share global dependencies (DI)
 │   ├── routes               # Main route definitions and async split points
 │   │   └── AppRoutes.tsx    # Bootstrap main application routes
-│   │   ├── Routes.ts        # Constant files for unique URL path and pattern 
+│   │   ├── Routes.ts        # Constant files for unique URL path and pattern
 │   ├── services             # Services that the app consumes
 │   ├── theme                # Application-wide styles and theme
 │   ├── utils                # Utility functions
-│   │   └── test             # Utility test and config functions  
+│   │   └── test             # Utility test and config functions
 |   ├── ...
 |   ├── index.tsx            # Application bootstrap
 |   ├── app.tsx              # Entry point rendering
