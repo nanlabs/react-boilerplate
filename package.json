@@ -40,7 +40,8 @@
     "docker:dev:start": "docker run --rm -it --network host -v $PWD:/usr/src/app app",
     "docker:prod": "npm run docker:prod:build && npm run docker:prod:start",
     "docker:prod:build": "docker build -f docker/web/Dockerfile --target production -t app:production .",
-    "docker:prod:start": "docker run --rm -it --network host -v $PWD:/usr/src/app app:production"
+    "docker:prod:start": "docker run --rm -it --network host -v $PWD:/usr/src/app app:production",
+    "prepare": "husky install"
   },
   "husky": {
     "hooks": {
