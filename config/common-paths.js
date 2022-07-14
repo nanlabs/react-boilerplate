@@ -21,8 +21,7 @@ module.exports = {
   locales: path.resolve(__dirname, '..', 'static/locales/'),
   images: path.resolve(__dirname, '..', 'static/images/'),
   template: path.resolve(__dirname, '..', 'public/index.html'),
-  // favicon: path.resolve(__dirname, '..', 'public/favicon.ico'),
-  favicon: path.resolve(__dirname, '..', 'public/amalgam-32x32.png'),
+  favicon: path.resolve(__dirname, '..', 'public/favicon.ico'),
   manifest: path.resolve(__dirname, '..', 'public/manifest.json'),
   serviceWorker: path.resolve(__dirname, '..', 'src/', 'service-worker.ts'),
 };

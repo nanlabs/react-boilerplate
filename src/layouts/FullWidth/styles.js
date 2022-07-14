@@ -17,5 +17,5 @@ export const Main = styled.main`
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-top: 164px;
+  margin-top: var(--navbar-offset);
 `;

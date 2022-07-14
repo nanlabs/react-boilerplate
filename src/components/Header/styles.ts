@@ -21,7 +21,7 @@ export const Nav = styled.nav<NavProps>`
   color: black;
   background-color: #fefefe;
   transition: all 0.2s ease-in-out 0s;
-  padding: ${({ condensed }) => (condensed ? '20px 0' : '60px 20px')};
+  padding: ${({ condensed }) => (condensed ? '20px 0' : '40px 20px')};
   box-shadow: ${({ condensed }) => (condensed ? '0 2px 10px 0 rgba(36, 50, 66, 0.075)' : 'none')};
 `;
 
@@ -34,7 +34,7 @@ export const NavContainer = styled.div`
   padding: 0 20px;
 `;
 
-export const Brand = styled.img`
+export const Brand = styled.div`
   padding-right: 20px;
 `;
 

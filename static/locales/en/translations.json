@@ -1,9 +1,7 @@
 {
   "brand": "NaNLabs",
   "header": {
-    "howItWorks": "How it Works",
-    "integrations": "Integrations",
-    "pricing": "Pricing",
-    "aboutUs": "About Us"
+    "routerLinkExample": "Router example",
+    "integrations": "Integrations"
   }
 }

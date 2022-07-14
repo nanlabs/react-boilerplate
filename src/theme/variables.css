@@ -1,0 +1,25 @@
+:root {
+  --navbar-offset: 120px;
+  --background-color: #f1f3f8;
+  --text-color-primary: #393b44;
+  --text-color-secondary: #8d93ab;
+  --text-color-disabled: lightgrey;
+  --breakpoint-mobile: 480;
+  --breakpoint-tablet: 1024;
+  --breakpoint-laptop: 1400;
+  --breakpoint-desktop: 1920;
+}
+
+html[data-theme='light'] {
+  --background-color: #f1f3f8;
+  --text-color-primary: #393b44;
+  --text-color-secondary: #8d93ab;
+  --text-color-disabled: lightgrey;
+}
+
+html[data-theme='dark'] {
+  --background-color: #1a202c;
+  --text-color-primary: #edf2f7;
+  --text-color-secondary: #a0aec0;
+  --text-color-disabled: lightgrey;
+}
