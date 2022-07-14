@@ -23,8 +23,8 @@ const Hero = () => {
     <Root>
       <HeroContainer>
         <TextContainer fullWidth={!showIllustration}>
-          <Title>Agregar un titulo</Title>
-          <Subtitle>Agregar un subtitulo</Subtitle>
+          <Title>NaNLabs</Title>
+          <Subtitle>React Webpack Template demo</Subtitle>
         </TextContainer>
         {showIllustration && (
           <IllustrationContainer>
