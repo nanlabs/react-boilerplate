@@ -6,6 +6,9 @@ import 'theme';
 import Loading from 'components/Loading';
 import AppRoutes from 'routes/AppRoutes';
 import ReactQueryProvider from 'providers/ReactQueryProvider';
+import { toggleTheme } from 'utils/utils';
+
+window.toggleTheme = toggleTheme;
 
 const App: FC = () => (
   <Suspense fallback={<Loading />}>
