@@ -5,8 +5,10 @@ on:
   workflow_dispatch:
 
   push:
-    tags:
-      - v*
+    branches:
+      - main
+    # tags:
+    #  - v*
 
 jobs:
   linter:
@@ -114,7 +116,7 @@ jobs:
       - name: Make envfile
         uses: SpicyPizza/create-envfile@v1
         with:
-          file_name: .env.production
+          file_name: .env
           envkey_PUBLIC_URL: /react-webpack-boilerplate
 
       - name: Build page
