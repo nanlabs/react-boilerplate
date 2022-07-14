@@ -4,5 +4,5 @@ import Header from './Header';
 
 test('testing i18n in Header', async () => {
   render(<Header />);
-  expect(screen.getByText('How it Works')).toBeTruthy();
+  expect(screen.getByText('Router example')).toBeTruthy();
 });

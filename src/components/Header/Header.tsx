@@ -11,6 +11,7 @@ import NanBrand from 'components/NanBrand';
 const Header: FC = () => {
   const { t } = useTranslation(['config', 'translations']);
   const isFixed = useScroll(50);
+
   return (
     <FixedContainer>
       <Nav condensed={isFixed}>
