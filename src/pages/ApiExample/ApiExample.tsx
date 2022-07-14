@@ -3,8 +3,6 @@ import DefaultLayout from 'layouts/Default';
 import Repository from 'components/Repository';
 
 const ApiExample = () => {
-  Repository;
-
   return (
     <DefaultLayout>
       <Repository name={'tannerlinsley/react-query'} />

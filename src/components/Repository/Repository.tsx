@@ -6,7 +6,7 @@ import { RepositoryContainer } from './styles';
 type RepositoryProps = {
   name: string;
 };
-RepositoryContainer;
+
 const Repository: FC<RepositoryProps> = ({ name }) => {
   const { isLoading, error, data, isFetching } = useGithubRepositoryQuery(name);
 
