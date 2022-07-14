@@ -19,5 +19,5 @@ export const Main = styled.main`
   flex-direction: column;
   padding: 20px;
   max-width: 1240px;
-  margin-top: 164px;
+  margin-top: var(--navbar-offset);
 `;

@@ -18,3 +18,7 @@ body {
   flex-direction: column;
   background-color: #fefefe;
 }
+
+:root {
+  --navbar-offset: 120px
+}
