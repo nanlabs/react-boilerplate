@@ -115,6 +115,7 @@ jobs:
         uses: SpicyPizza/create-envfile@v1
         with:
           file_name: .env.production
+          envkey_PUBLIC_URL: /react-webpack-boilerplate
 
       - name: Build page
         run: npm run build
