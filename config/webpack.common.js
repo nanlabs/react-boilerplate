@@ -62,7 +62,7 @@ const config = {
         test: /\.jpe?g$|\.gif$|\.ico$|\.png$|\.svg$/,
         loader: 'file-loader',
         options: {
-          name: 'assets/fonts/[name].[chunkhash].[ext]',
+          name: 'assets/fonts/[name].[hash:8].[ext]',
         },
       },
 
@@ -73,14 +73,14 @@ const config = {
         options: {
           limit: 10000,
           mimetype: 'application/font-woff',
-          name: 'assets/fonts/[name].[chunkhash].[ext]',
+          name: 'assets/fonts/[name].[hash:8].[ext]',
         },
       },
       {
         test: /\.(ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loader: 'file-loader',
         options: {
-          name: 'assets/fonts/[name].[chunkhash].[ext]',
+          name: 'assets/fonts/[name].[hash:8].[ext]',
         },
       },
       {
