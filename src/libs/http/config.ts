@@ -12,7 +12,6 @@ const config = {
 export const setupInterceptors = (axiosInstance: AxiosInstance) => {
   // here you can add your interceptor for axios instance
   // axiosInstance.interceptors.request.use(authInterceptor);
-  console.log(axiosInstance);
 };
 
 export const createAxiosInstance = () => {
