@@ -19,8 +19,6 @@ const Hero = () => {
   const windowSize = useWindowSize();
   const showIllustration = windowSize.width > 1200;
 
-  console.log('showIllustration', showIllustration);
-
   return (
     <Root>
       <HeroContainer>
