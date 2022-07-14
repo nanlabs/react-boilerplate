@@ -13,18 +13,19 @@
     ],
     "background_color": "#4e0041",
     "theme_color": "#4e0041",
-    "main.css": "/react-webpack-boilerplate/assets/css/main.e426b420731fcd4471b4.css",
-    "main.js": "/react-webpack-boilerplate/assets/js/main.e426b420.bundle.js",
-    "assets/js/131.f30db27a.js": "/react-webpack-boilerplate/assets/js/131.f30db27a.js",
-    "assets/js/404.146ae1fd.bundle.js": "/react-webpack-boilerplate/assets/js/404.146ae1fd.bundle.js",
+    "main.css": "/react-webpack-boilerplate/assets/css/main.aead0b301cf9994ca80a.css",
+    "main.js": "/react-webpack-boilerplate/assets/js/main.aead0b30.bundle.js",
+    "assets/js/131.2aefd96a.js": "/react-webpack-boilerplate/assets/js/131.2aefd96a.js",
+    "assets/js/303.d88f5f6a.bundle.js": "/react-webpack-boilerplate/assets/js/303.d88f5f6a.bundle.js",
     "favicon.ico": "/react-webpack-boilerplate/favicon.ico",
+    "assets/fonts/react.svg": "/react-webpack-boilerplate/assets/fonts/react.[chunkhash].svg",
     "index.html": "/react-webpack-boilerplate/index.html",
-    "locales/en/config.json": "/react-webpack-boilerplate/locales/en/config.json",
-    "locales/en/translations.json": "/react-webpack-boilerplate/locales/en/translations.json"
+    "locales/en/translations.json": "/react-webpack-boilerplate/locales/en/translations.json",
+    "locales/en/config.json": "/react-webpack-boilerplate/locales/en/config.json"
   },
   "entrypoints": [
-    "assets/js/404.146ae1fd.bundle.js",
-    "assets/css/main.e426b420731fcd4471b4.css",
-    "assets/js/main.e426b420.bundle.js"
+    "assets/js/303.d88f5f6a.bundle.js",
+    "assets/css/main.aead0b301cf9994ca80a.css",
+    "assets/js/main.aead0b30.bundle.js"
   ]
 }
