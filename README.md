@@ -85,7 +85,7 @@ Available scripts:
 ```
 .
 ├── build                    # Production build, result of `npm run build`
-├── config                    # Webpack and Jest configuration
+├── config                   # Webpack and Jest configuration
 ├── public                   # Static public assets (not imported anywhere in source code)
 │   └── index.html           # Main HTML page template for app
 ├── src                      # Application source code
@@ -105,7 +105,7 @@ Available scripts:
 │   │   └── test             # Utility test and config functions
 |   ├── ...
 |   ├── index.tsx            # Application bootstrap
-|   ├── app.tsx              # Entry point rendering
+|   ├── App.tsx              # Entry point rendering
 └── static                   # Static public assets imported anywhere in source code
 ```
 
