@@ -62,7 +62,7 @@ const config = {
         test: /\.jpe?g$|\.gif$|\.ico$|\.png$|\.svg$/,
         loader: 'file-loader',
         options: {
-          name: 'assets/fonts/[name].[hash:8].[ext]',
+          name: 'assets/images/[name].[hash:8].[ext]',
         },
       },
 

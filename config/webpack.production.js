@@ -16,7 +16,7 @@ const config = {
     filename: 'assets/js/[name].[chunkhash:8].bundle.js',
     chunkFilename: 'assets/js/[name].[chunkhash:8].js',
     path: commonPaths.outputServerPath,
-    publicPath: `${PUBLIC_URL}`
+    publicPath: `${PUBLIC_URL}/`
   },
   mode: 'production',
   optimization: {
