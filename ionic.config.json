@@ -1,0 +1,7 @@
+{
+  "name": "react-webpack-boilerplate",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

@@ -41,7 +41,9 @@
     "docker:prod": "npm run docker:prod:build && npm run docker:prod:start",
     "docker:prod:build": "docker build -f docker/web/Dockerfile --target production -t app:production .",
     "docker:prod:start": "docker run --rm -it --network host -v $PWD:/usr/src/app app:production",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "ionic": "ionic",
+    "prepare:android": "ionic cap add android && ionic cap copy android --no-build"
   },
   "husky": {
     "hooks": {
@@ -63,6 +65,7 @@
     ]
   },
   "dependencies": {
+    "@ionic/react": "^6.1.14",
     "axios": "^0.27.2",
     "i18next": "^21.8.9",
     "i18next-browser-languagedetector": "^6.1.4",
@@ -77,6 +80,10 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
+    "@capacitor/android": "3.6.0",
+    "@capacitor/cli": "^3.6.0",
+    "@capacitor/core": "^3.6.0",
+    "@ionic/cli": "^6.20.1",
     "@testing-library/react": "^13.3.0",
     "@types/jest": "^28.1.1",
     "@types/node": "^17.0.41",

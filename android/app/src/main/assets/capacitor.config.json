@@ -1,0 +1,8 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "react-webpack-boilerplate",
+	"bundledWebRuntime": false,
+	"npmClient": "npm",
+	"webDir": "build",
+	"cordova": {}
+}
