@@ -18,7 +18,7 @@ $ docker image build -t app-android:latest -f ./docker/android/android.Dockerfil
 
 ```sh
 $ docker run --rm --name android-build -v $PWD:/pwd -w /pwd  app-android /bin/sh -c \
-  "yarn && yarn build:prod && yarn prepare:android && cd android && ./gradlew build && ./gradlew bundleRelease"
+  "yarn && yarn build && yarn prepare:android && cd android && ./gradlew build && ./gradlew bundleRelease"
 ```
 
 ### Test avd

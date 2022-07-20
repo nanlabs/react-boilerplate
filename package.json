@@ -43,7 +43,7 @@
     "docker:prod:start": "docker run --rm -it --network host -v $PWD:/usr/src/app app:production",
     "prepare": "husky install",
     "ionic": "ionic",
-    "prepare:android": "ionic cap add android && ionic cap copy android --no-build"
+    "prepare:android": "ionic cap copy android --no-build"
   },
   "husky": {
     "hooks": {
