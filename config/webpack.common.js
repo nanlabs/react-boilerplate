@@ -48,7 +48,7 @@ const config = {
         test: cssRegex,
         use: [
           { loader: MiniCssWebpackPlugin.loader },
-          { loader: 'css-loader', options: { importLoaders: 1, module: { mode: 'icss' } } },
+          { loader: 'css-loader', options: { importLoaders: 1, modules: { mode: 'icss' } } },
         ],
       },
       {
@@ -65,7 +65,7 @@ const config = {
         test: sassRegex,
         use: [
           { loader: MiniCssWebpackPlugin.loader },
-          { loader: 'css-loader', options: { importLoaders: 1, module: { mode: 'icss' } } },
+          { loader: 'css-loader', options: { importLoaders: 1, modules: { mode: 'icss' } } },
           'sass-loader',
         ],
       },
@@ -84,7 +84,7 @@ const config = {
         test: lessRegex,
         use: [
           { loader: MiniCssWebpackPlugin.loader },
-          { loader: 'css-loader', options: { importLoaders: 1, module: { mode: 'icss' } } },
+          { loader: 'css-loader', options: { importLoaders: 1, modules: { mode: 'icss' } } },
           'less-loader',
         ],
       },
