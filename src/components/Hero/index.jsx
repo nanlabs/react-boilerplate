@@ -17,7 +17,7 @@ import {
 
 import classnames from 'classnames';
 
-import styles from 'foo.module.css';
+import styles from './foo.module.css';
 import sass from './foo.module.scss';
 console.log('styles', styles, sass);
 
