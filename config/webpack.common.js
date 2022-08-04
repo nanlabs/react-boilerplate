@@ -46,6 +46,7 @@ const config = {
       // these rules handle styles
       {
         test: cssRegex,
+        exclude: cssModuleRegex,
         use: [
           { loader: MiniCssWebpackPlugin.loader },
           { loader: 'css-loader', options: { importLoaders: 1, modules: { mode: 'icss' } } },
@@ -57,12 +58,13 @@ const config = {
           { loader: MiniCssWebpackPlugin.loader },
           {
             loader: 'css-loader',
-            options: { importLoaders: 1, modules: { mode: 'local' }, localIdentName: '[local]___[hash:base64:5]' },
+            options: { importLoaders: 1, modules: { mode: 'local', localIdentName: '[local]___[hash:base64:5]' } },
           },
         ],
       },
       {
         test: sassRegex,
+        exclude: sassModuleRegex,
         use: [
           { loader: MiniCssWebpackPlugin.loader },
           { loader: 'css-loader', options: { importLoaders: 1, modules: { mode: 'icss' } } },
@@ -75,13 +77,14 @@ const config = {
           { loader: MiniCssWebpackPlugin.loader },
           {
             loader: 'css-loader',
-            options: { importLoaders: 1, modules: { mode: 'local' }, localIdentName: '[local]___[hash:base64:5]' },
+            options: { importLoaders: 1, modules: { mode: 'local', localIdentName: '[local]___[hash:base64:5]' } },
           },
           'sass-loader',
         ],
       },
       {
         test: lessRegex,
+        exclude: lessModuleRegex,
         use: [
           { loader: MiniCssWebpackPlugin.loader },
           { loader: 'css-loader', options: { importLoaders: 1, modules: { mode: 'icss' } } },
@@ -94,7 +97,7 @@ const config = {
           { loader: MiniCssWebpackPlugin.loader },
           {
             loader: 'css-loader',
-            options: { importLoaders: 1, modules: { mode: 'local' }, localIdentName: '[local]___[hash:base64:5]' },
+            options: { importLoaders: 1, modules: { mode: 'local', localIdentName: '[local]___[hash:base64:5]' } },
           },
           'less-loader',
         ],

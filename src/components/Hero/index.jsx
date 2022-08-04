@@ -15,12 +15,20 @@ import {
   ImageContainer,
 } from './styles.js';
 
+import classnames from 'classnames';
+
+import styles from './foo.module.css';
+import sass from './foo.module.scss';
+console.log('styles', styles, sass);
+
 const Hero = () => {
   const windowSize = useWindowSize();
   const showIllustration = windowSize.width > 1200;
 
   return (
     <Root>
+      <span className={styles.btn}>Hello</span>
+      <span className={classnames(sass['btn-nan'], sass.large)}>nanlabs</span>
       <HeroContainer>
         <TextContainer fullWidth={!showIllustration}>
           <Title>NaNLabs</Title>
