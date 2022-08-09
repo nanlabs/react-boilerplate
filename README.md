@@ -13,7 +13,7 @@
 
 </div>
 
-This project was generated using [React Webpack Starter](https://github.com/Create-Node-App/create-react-webpack-app).
+This project was generated using [create-react-webpack-app](https://github.com/Create-Node-App/create-react-webpack-app).
 
 ## Development
 
