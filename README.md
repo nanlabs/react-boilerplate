@@ -13,7 +13,7 @@
 
 </div>
 
-This project was generated using [create-react-webpack-app](https://www.npmjs.com/package/create-react-webpack-project). Don't use this template as it! Generate yours using the command and following the options in the interactive menu. Check the docs for more information!
+This project was generated using [create-react-webpack-app](https://www.npmjs.com/package/create-react-webpack-project). **DON'T USE THIS TEMPLATE AS IT!** Generate yours using the command and following the options in the interactive menu. Check the docs for more information!
 
 ## Development
 
