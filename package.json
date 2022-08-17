@@ -41,14 +41,10 @@
     "docker:prod": "npm run docker:prod:build && npm run docker:prod:start",
     "docker:prod:build": "docker build -f docker/web/Dockerfile --target production -t app:production .",
     "docker:prod:start": "docker run --rm -it --network host -v $PWD:/usr/src/app app:production",
-    "prepare": "husky install",
+    "prepare": "is-ci || husky install",
+    "lint-staged": "lint-staged",
     "ionic": "ionic",
     "prepare:android": "ionic cap copy android --no-build"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "*.{js,jsx}": [
@@ -60,13 +56,14 @@
     ],
     "*.{ts,tsx}": [
       "prettier --write",
-      "npm run lint:fix",
-      "git add"
+      "npm run lint:fix"
     ]
   },
   "dependencies": {
     "@ionic/react": "^6.1.14",
     "axios": "^0.27.2",
+    "classnames": "^2.3.1",
+    "hamburger-react": "^2.5.0",
     "i18next": "^21.8.9",
     "i18next-browser-languagedetector": "^6.1.4",
     "i18next-http-backend": "^1.4.1",
@@ -116,6 +113,7 @@
     "html-webpack-plugin": "^5.5.0",
     "husky": "^8.0.1",
     "inject-html-webpack-plugin": "^1.0.1",
+    "is-ci": "^3.0.1",
     "jest": "^28.1.1",
     "jest-environment-jsdom": "^28.1.1",
     "jest-transform-stub": "^2.0.0",

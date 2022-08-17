@@ -6,6 +6,14 @@ const MiniCssWebpackPlugin = require('mini-css-extract-plugin');
 
 const commonPaths = require('./common-paths');
 
+// style files regexes
+const cssRegex = /\.css$/;
+const cssModuleRegex = /\.module\.css$/;
+const lessRegex = /\.less$/;
+const lessModuleRegex = /\.module\.less$/;
+const sassRegex = /\.(scss|sass)$/;
+const sassModuleRegex = /\.module\.(scss|sass)$/;
+
 const config = {
   context: commonPaths.context,
   entry: [...commonPaths.entryPoints],
@@ -37,22 +45,60 @@ const config = {
 
       // these rules handle styles
       {
-        test: /\.css$/,
-        use: [{ loader: MiniCssWebpackPlugin.loader }, { loader: 'css-loader', options: { importLoaders: 1 } }],
-      },
-      {
-        test: /\.(scss|sass)$/,
+        test: cssRegex,
+        exclude: cssModuleRegex,
         use: [
           { loader: MiniCssWebpackPlugin.loader },
-          { loader: 'css-loader', options: { importLoaders: 1 } },
+          { loader: 'css-loader', options: { importLoaders: 1, modules: { mode: 'icss' } } },
+        ],
+      },
+      {
+        test: cssModuleRegex,
+        use: [
+          { loader: MiniCssWebpackPlugin.loader },
+          {
+            loader: 'css-loader',
+            options: { importLoaders: 1, modules: { mode: 'local', localIdentName: '[local]___[hash:base64:5]' } },
+          },
+        ],
+      },
+      {
+        test: sassRegex,
+        exclude: sassModuleRegex,
+        use: [
+          { loader: MiniCssWebpackPlugin.loader },
+          { loader: 'css-loader', options: { importLoaders: 1, modules: { mode: 'icss' } } },
           'sass-loader',
         ],
       },
       {
-        test: /\.less$/,
+        test: sassModuleRegex,
         use: [
           { loader: MiniCssWebpackPlugin.loader },
-          { loader: 'css-loader', options: { importLoaders: 1 } },
+          {
+            loader: 'css-loader',
+            options: { importLoaders: 1, modules: { mode: 'local', localIdentName: '[local]___[hash:base64:5]' } },
+          },
+          'sass-loader',
+        ],
+      },
+      {
+        test: lessRegex,
+        exclude: lessModuleRegex,
+        use: [
+          { loader: MiniCssWebpackPlugin.loader },
+          { loader: 'css-loader', options: { importLoaders: 1, modules: { mode: 'icss' } } },
+          'less-loader',
+        ],
+      },
+      {
+        test: lessModuleRegex,
+        use: [
+          { loader: MiniCssWebpackPlugin.loader },
+          {
+            loader: 'css-loader',
+            options: { importLoaders: 1, modules: { mode: 'local', localIdentName: '[local]___[hash:base64:5]' } },
+          },
           'less-loader',
         ],
       },
