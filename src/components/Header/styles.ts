@@ -21,40 +21,24 @@ export const Nav = styled.nav<NavProps>`
   color: black;
   background-color: #fefefe;
   transition: all 0.2s ease-in-out 0s;
-  padding: ${({ condensed }) => (condensed ? '20px 0' : '40px 20px')};
+  padding: ${({ condensed }) => (condensed ? '20px 0' : '40px 0px')};
   box-shadow: ${({ condensed }) => (condensed ? '0 2px 10px 0 rgba(36, 50, 66, 0.075)' : 'none')};
-`;
 
-export const NavContainer = styled.div`
-  display: flex;
-  flex: 1;
-  align-items: center;
-  justify-content: flex-start;
-  max-width: 1240px;
-  padding: 0 20px;
-`;
+  .desktop-nav {
+    display: flex;
+  }
 
-export const Brand = styled.div`
-  padding-right: 20px;
-`;
+  .mobile-nav {
+    display: none;
+  }
 
-export const NavList = styled.ul`
-  display: flex;
-  flex: 1;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0 40px;
-`;
+  @media (max-width: 768px) {
+    .desktop-nav {
+      display: none;
+    }
 
-export const NavItem = styled.li`
-  font-size: 20px;
-  font-weight: normal;
-  margin: 0 14px;
-  cursor: pointer;
-  list-style: none;
-
-  a {
-    text-decoration: none;
-    color: black;
+    .mobile-nav {
+      display: flex;
+    }
   }
 `;
