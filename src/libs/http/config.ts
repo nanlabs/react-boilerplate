@@ -2,7 +2,7 @@ import axios, { AxiosInstance } from 'axios';
 
 // axios instance's config
 const config = {
-  baseURL: process.env.API_URL,
+  baseURL: process.env.REACT_APP_API_URL,
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',

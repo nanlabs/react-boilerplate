@@ -1,10 +1,17 @@
-const webpack = require('webpack');
 const path = require('path');
+const { DefinePlugin } = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssWebpackPlugin = require('mini-css-extract-plugin');
 
-const commonPaths = require('./common-paths');
+const getClientEnvironment = require('./env');
+
+const publicUrl = process.env.PUBLIC_URL || require('../package.json').homepage || '';
+
+const env = getClientEnvironment(publicUrl);
+const paths = require('./paths');
 
 // style files regexes
 const cssRegex = /\.css$/;
@@ -15,11 +22,11 @@ const sassRegex = /\.(scss|sass)$/;
 const sassModuleRegex = /\.module\.(scss|sass)$/;
 
 const config = {
-  context: commonPaths.context,
-  entry: [...commonPaths.entryPoints],
+  context: paths.context,
+  entry: [...paths.entryPoints],
   output: {
     filename: 'assets/js/[name].[hash:8].bundle.js',
-    path: commonPaths.outputPath,
+    path: paths.outputPath,
     publicPath: '/',
   },
   module: {
@@ -142,24 +149,70 @@ const config = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
     alias: {
-      app: commonPaths.sourcePath,
+      app: paths.sourcePath,
       react: path.resolve(__dirname, '../', 'node_modules/react'),
       'app-assets': path.resolve(__dirname, '../', 'static/'),
     },
     modules: ['.', 'node_modules'],
   },
   plugins: [
+    new DefinePlugin(env.stringified),
     new CleanWebpackPlugin({
-      root: commonPaths.root,
+      root: paths.root,
     }),
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: commonPaths.locales,
+          from: paths.favicon,
+          to: paths.outputServerPath,
+        },
+        {
+          from: paths.locales,
           to: 'locales',
           toType: 'dir',
         },
       ],
+    }),
+    new MiniCssWebpackPlugin({
+      filename: 'assets/css/[name].[chunkhash].css',
+      chunkFilename: 'assets/css/[id].[chunkhash].css',
+    }),
+    new HtmlWebpackPlugin({
+      template: paths.template,
+      title: 'app',
+      base: paths.publicUrlOrPath,
+      filename: path.resolve(__dirname, paths.outputPath, 'index.html'),
+      favicon: paths.favicon,
+    }),
+    new WebpackManifestPlugin({
+      publicPath: `${paths.publicUrlOrPath}/`,
+      seed: {
+        name: 'app',
+        short_name: 'app',
+        start_url: 'index.html',
+        display: 'standalone',
+        icons: [
+          {
+            src: 'favicon.ico',
+            sizes: '512x512',
+            type: 'image/x-icon',
+          },
+        ],
+        background_color: '#4e0041',
+        theme_color: '#4e0041',
+      },
+      generate: (seed, files, entrypoints) => {
+        const manifestFiles = files.reduce((manifest, file) => {
+          manifest[file.name] = file.path;
+          return manifest;
+        }, seed);
+        const entrypointFiles = entrypoints.main.filter((fileName) => !fileName.endsWith('.map'));
+
+        return {
+          files: manifestFiles,
+          entrypoints: entrypointFiles,
+        };
+      },
     }),
   ],
 };
