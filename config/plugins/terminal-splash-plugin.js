@@ -24,7 +24,7 @@ class TerminalSplashPlugin {
     this.options = props.options;
   }
   apply(compiler) {
-    compiler.hooks.done.tap('Hello World Plugin', () => {
+    compiler.hooks.done.tap('done', () => {
       successCompilation(this.options.url);
     });
     compiler.hooks.invalid.tap('invalid', compiling);
