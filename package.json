@@ -28,7 +28,7 @@
     "build:watch": "npm run build --watch",
     "lint": "prettier --ignore-path .eslintignore --check \"**/*.{js,jsx,ts,tsx,json,css,sass,scss,less,html,md,yml,yaml}\" && eslint src",
     "lint:fix": "prettier --ignore-path .eslintignore --write \"**/*.{js,jsx,ts,tsx,json,css,sass,scss,less,html,md,yml,yaml}\" && eslint src --fix",
-    "serve:dev": "NODE_ENV=development webpack-dev-server --mode development --open",
+    "serve:dev": "NODE_ENV=development webpack-dev-server --mode development",
     "serve:dev:dashboard": "webpack-dashboard webpack-dev-server -- --mode development --env addon=dashboard",
     "start": "npm run serve:dev",
     "serve": "npm run build && serve -s -C build",

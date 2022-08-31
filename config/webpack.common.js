@@ -1,10 +1,9 @@
-const { DefinePlugin } = require('webpack');
 const path = require('path');
+const { DefinePlugin } = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssWebpackPlugin = require('mini-css-extract-plugin');
 
 const getClientEnvironment = require('./env');
@@ -174,11 +173,15 @@ const config = {
         },
       ],
     }),
+    new MiniCssWebpackPlugin({
+      filename: 'assets/css/[name].[chunkhash].css',
+      chunkFilename: 'assets/css/[id].[chunkhash].css',
+    }),
     new HtmlWebpackPlugin({
       template: paths.template,
       title: 'app',
       base: paths.publicUrlOrPath,
-      filename: path.resolve(__dirname, paths.templatesOutputServerPath, 'index.html'),
+      filename: path.resolve(__dirname, paths.outputPath, 'index.html'),
       favicon: paths.favicon,
     }),
     new WebpackManifestPlugin({

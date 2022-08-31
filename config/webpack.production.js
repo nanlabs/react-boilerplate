@@ -1,4 +1,3 @@
-const MiniCssWebpackPlugin = require('mini-css-extract-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 
 const paths = require('./paths');
@@ -8,7 +7,7 @@ const config = {
     filename: 'assets/js/[name].[chunkhash:8].bundle.js',
     chunkFilename: 'assets/js/[name].[chunkhash:8].js',
     path: paths.outputPath,
-    publicPath: `${PUBLIC_URL}/`,
+    publicPath: `${paths.publicUrlOrPath}/`,
   },
   mode: 'production',
   optimization: {
@@ -29,12 +28,6 @@ const config = {
       }),
     ],
   },
-  plugins: [
-    new MiniCssWebpackPlugin({
-      filename: 'assets/css/[name].[chunkhash].css',
-      chunkFilename: 'assets/css/[id].[chunkhash].css',
-    }),
-  ],
 };
 
 module.exports = config;
