@@ -5,7 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const MiniCssWebpackPlugin = require('mini-css-extract-plugin');
-
+const TerminalSplashPlugin = require('./plugins/terminal-splash-plugin');
 const commonPaths = require('./common-paths');
 
 const DEFAULT_PORT = parseInt(process.env.PORT, 10) || 3000;
@@ -18,6 +18,7 @@ const config = {
   entry: [],
   mode: 'development',
   devtool: 'cheap-module-source-map',
+  stats: 'errors-warnings',
   devServer: {
     static: {
       directory: commonPaths.outputPath,
@@ -84,6 +85,11 @@ const config = {
           to: commonPaths.outputPath,
         },
       ],
+    }),
+    new TerminalSplashPlugin({
+      options: {
+        url: URL_BASE,
+      },
     }),
   ],
 };
