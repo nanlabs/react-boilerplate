@@ -1,8 +1,6 @@
-const path = require('path');
 const { merge } = require('webpack-merge');
 
 const commonConfig = require('./config/webpack.common.js');
-require('dotenv').config();
 
 /**
  * getAddons is a function that returns valid addon modules
@@ -19,7 +17,6 @@ const getAddons = (addons = '') =>
 module.exports = ({ env, addon }) => {
   const targetEnv = env || 'production';
 
-  require('dotenv').config({ path: path.resolve(process.cwd(), `.env.${targetEnv}`) });
   const envConfig = require(`./config/webpack.${targetEnv}.js`);
 
   return merge(commonConfig, envConfig, ...getAddons(addon));
