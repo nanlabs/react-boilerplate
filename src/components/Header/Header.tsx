@@ -8,8 +8,6 @@ import { links } from './domain/links';
 const Header: FC = () => {
   const isFixed = useScroll(50);
 
-  console.log('Ho ');
-
   return (
     <FixedContainer>
       <Nav condensed={isFixed}>
