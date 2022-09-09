@@ -6,12 +6,10 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssWebpackPlugin = require('mini-css-extract-plugin');
 
+const paths = require('./paths');
 const getClientEnvironment = require('./env');
 
-const publicUrl = process.env.PUBLIC_URL || require('../package.json').homepage || '';
-
-const env = getClientEnvironment(publicUrl);
-const paths = require('./paths');
+const env = getClientEnvironment(paths.publicUrlOrPath);
 
 // style files regexes
 const cssRegex = /\.css$/;
