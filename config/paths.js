@@ -9,7 +9,7 @@ module.exports = {
 
   entryPoints: [path.resolve(__dirname, '..', 'src/index.tsx')],
 
-  outputPath: path.resolve(__dirname, '..', process.env.DEV_BUILD_DIR || 'build/'),
+  outputPath: path.resolve(__dirname, '..', process.env.BUILD_OUTPUT_DIR || 'build/'),
 
   locales: path.resolve(__dirname, '..', 'static/locales/'),
   images: path.resolve(__dirname, '..', 'static/images/'),
