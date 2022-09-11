@@ -6,7 +6,7 @@ const clearConsole = () =>
 const successCompilation = (url) => {
   clearConsole();
   console.log('');
-  console.log(chalk.bgHex('#008c61')(' React Webpack Boilerplate '));
+  console.log(chalk.bgHex('#008c61')(' React Webpack Project '));
   console.log('');
   console.log(chalk.bold(' 🚀  App is available locally:') + ' ' + chalk.underline(url));
   console.log('');
