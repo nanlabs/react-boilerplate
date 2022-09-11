@@ -23,7 +23,7 @@ const config = {
   context: paths.context,
   entry: [...paths.entryPoints],
   output: {
-    filename: 'assets/js/[name].[hash:8].bundle.js',
+    filename: 'assets/js/[name].[chunkhash:8].bundle.js',
     path: paths.outputPath,
     publicPath: '/',
   },
@@ -113,7 +113,7 @@ const config = {
         test: /\.jpe?g$|\.gif$|\.ico$|\.png$|\.svg$/,
         loader: 'file-loader',
         options: {
-          name: 'assets/images/[name].[hash:8].[ext]',
+          name: 'assets/images/[name].[chunkhash:8].[ext]',
         },
       },
 
@@ -124,14 +124,14 @@ const config = {
         options: {
           limit: 10000,
           mimetype: 'application/font-woff',
-          name: 'assets/fonts/[name].[hash:8].[ext]',
+          name: 'assets/fonts/[name].[chunkhash:8].[ext]',
         },
       },
       {
         test: /\.(ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loader: 'file-loader',
         options: {
-          name: 'assets/fonts/[name].[hash:8].[ext]',
+          name: 'assets/fonts/[name].[chunkhash:8].[ext]',
         },
       },
       {
