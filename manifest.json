@@ -13,8 +13,8 @@
     ],
     "background_color": "#4e0041",
     "theme_color": "#4e0041",
-    "main.css": "/react-webpack-boilerplate/assets/css/main.7110825f89f468f0360a.css",
-    "main.js": "/react-webpack-boilerplate/assets/js/main.7110825f.bundle.js",
+    "main.css": "/react-webpack-boilerplate/assets/css/main.17fcc958d31ed82acdb8.css",
+    "main.js": "/react-webpack-boilerplate/assets/js/main.17fcc958.bundle.js",
     "assets/js/131.24b459bf.js": "/react-webpack-boilerplate/assets/js/131.24b459bf.js",
     "assets/js/465.6ed59ff2.bundle.js": "/react-webpack-boilerplate/assets/js/465.6ed59ff2.bundle.js",
     "favicon.ico": "/react-webpack-boilerplate/favicon.ico",
@@ -25,7 +25,7 @@
   },
   "entrypoints": [
     "assets/js/465.6ed59ff2.bundle.js",
-    "assets/css/main.7110825f89f468f0360a.css",
-    "assets/js/main.7110825f.bundle.js"
+    "assets/css/main.17fcc958d31ed82acdb8.css",
+    "assets/js/main.17fcc958.bundle.js"
   ]
 }
