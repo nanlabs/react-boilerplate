@@ -12,6 +12,9 @@ const config = {
   mode: 'development',
   devtool: 'cheap-module-source-map',
   stats: 'errors-warnings',
+  optimization: {
+    minimize: false,
+  },
   devServer: {
     static: {
       directory: paths.outputPath,
