@@ -1,5 +1,5 @@
 import React, { FC, Suspense } from 'react';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 import 'theme';
 
@@ -13,9 +13,9 @@ window.toggleTheme = toggleTheme;
 const App: FC = () => (
   <Suspense fallback={<Loading />}>
     <ReactQueryProvider>
-      <HashRouter>
+      <BrowserRouter>
         <AppRoutes />
-      </HashRouter>
+      </BrowserRouter>
     </ReactQueryProvider>
   </Suspense>
 );
