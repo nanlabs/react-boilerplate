@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import FullWidthLayout from 'layouts/FullWidth';
-import Hero from 'components/Hero';
+import FullWidthLayout from '@/layouts/FullWidth';
+import Hero from '@/components/Hero';
 
 const Landing: FC = () => {
   return (

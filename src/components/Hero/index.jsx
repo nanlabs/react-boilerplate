@@ -1,8 +1,8 @@
 import React from 'react';
-import logo from 'app-assets/images/react.svg';
-import NanLabsIcon from 'components/NanLabsIcon';
-import ShapeBackground from 'components/ShapeBackground';
-import useWindowSize from 'hooks/useWindowSize';
+import logo from '../../assets/images/react.svg';
+import NanLabsIcon from '@/components/NanLabsIcon';
+import ShapeBackground from '@/components/ShapeBackground';
+import useWindowSize from '@/hooks/useWindowSize';
 
 import {
   Root,

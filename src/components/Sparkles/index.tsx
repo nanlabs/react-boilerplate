@@ -1,6 +1,6 @@
 import React, { CSSProperties, FC, ReactNode } from 'react';
-import { random, range } from 'utils/utils';
-import useRandomInterval from 'hooks/useRandomInterval';
+import { random, range } from '@/utils/utils';
+import useRandomInterval from '@/hooks/useRandomInterval';
 import { ChildWrapper, SparkleSvg, SparkleWrapper, Wrapper } from './styles';
 
 const DEFAULT_COLOR = '#FFC700';

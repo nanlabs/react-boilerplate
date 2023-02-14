@@ -16,14 +16,14 @@ $fontSize: 8rem;
       $key: $i + 1;
 
       &:nth-child(#{$key}) {
-        $row: floor($i / 20);
+        $row: floor($i * 0.05);
         color: rgba(30 - $key * 2, 255 - $key * 2, 233 - $key * 2, 1);
         clip-path: polygon(
-          floor($i / 2) * 10% - $row * 100% $row * 50%,
-          floor($key / 2) * 10% - $row * 100% ceil($key % 2) * 50% + ($row * 50%),
-          ceil($key / 2) * 10% - $row * 100% ($row + 1) * 50%
+          floor($i * 0.5) * 10% - $row * 100% $row * 50%,
+          floor($key * 0.5) * 10% - $row * 100% ceil($key % 2) * 50% + ($row * 50%),
+          ceil($key * 0.5) * 10% - $row * 100% ($row + 1) * 50%
         );
-        transform-origin: random(100) - 50 + floor($i / 2) * 10% - $row * 100% random(100) - 50 + $row * 50%;
+        transform-origin: random(100) - 50 + floor($i * 0.5) * 10% - $row * 100% random(100) - 50 + $row * 50%;
         animation: fly#{$key} 5000ms $i * 40ms cubic-bezier(0.36, 0.1, 0.16, 1) infinite alternate;
 
         @keyframes fly#{$key} {

@@ -1,6 +1,6 @@
 import React from 'react';
-import DefaultLayout from 'layouts/Default';
-import Repository from 'components/Repository';
+import DefaultLayout from '@/layouts/Default';
+import Repository from '@/components/Repository';
 
 const ApiExample = () => {
   return (

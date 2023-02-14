@@ -2,11 +2,11 @@ import React, { FC } from 'react';
 import { NavContainer, Brand, NavList, NavItem } from './styles';
 import { useTranslation } from 'react-i18next';
 import { Link, NavLink } from 'react-router-dom';
-import { Routes } from 'routes/Routes';
-import Button from 'components/Button';
-import Sparkles from 'components/Sparkles';
-import NanBrand from 'components/NanBrand';
-import type { NavLinkProp } from 'components/Header/domain/links';
+import { Routes } from '@/routes/Routes';
+import Button from '@/components/Button';
+import Sparkles from '@/components/Sparkles';
+import NanBrand from '@/components/NanBrand';
+import type { NavLinkProp } from '@/components/Header/domain/links';
 
 type DesktopNavProps = {
   links: NavLinkProp[];

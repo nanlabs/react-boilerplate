@@ -1,9 +1,9 @@
 import React from 'react';
 import { Root, ShapeWrapper } from './styles.js';
-import CircleShape from 'components/CircleShape';
-import RingShape from 'components/RingShape';
-import { UpDown, UpDownWide } from 'components/Animations';
-import useWindowSize from 'hooks/useWindowSize';
+import CircleShape from '@/components/CircleShape';
+import RingShape from '@/components/RingShape';
+import { UpDown, UpDownWide } from '@/components/Animations';
+import useWindowSize from '@/hooks/useWindowSize';
 
 const violet = '#805ad5';
 const lightGreen = '#38b2ac';

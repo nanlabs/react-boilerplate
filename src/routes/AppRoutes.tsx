@@ -1,14 +1,14 @@
 import React, { FC } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import Landing from 'pages/Landing/Landing';
+import Landing from '@/pages/Landing/Landing';
 import { Routes as RouteMap } from './Routes';
-import UserDetail from 'pages/UserDetail';
-import LinksExamples from 'pages/Links';
-import Powered from 'pages/Powered';
-import NotFound from 'pages/404';
-import ApiExample from 'pages/ApiExample';
-import CssExample from 'pages/CssExample';
+import UserDetail from '@/pages/UserDetail';
+import LinksExamples from '@/pages/Links';
+import Powered from '@/pages/Powered';
+import NotFound from '@/pages/404';
+import ApiExample from '@/pages/ApiExample';
+import CssExample from '@/pages/CssExample';
 
 const AppRoutes: FC = () => (
   <Routes>

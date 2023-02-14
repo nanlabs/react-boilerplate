@@ -17,17 +17,17 @@ i18n
       // returning a path:
       // function(lngs, namespaces) { return customPath; }
       // the returned path will interpolate lng, ns if provided like giving a static path
-      loadPath: `${process.env.PUBLIC_URL || ''}/locales/{{lng}}/{{ns}}.json`,
+      loadPath: `${import.meta.env.PUBLIC_URL || ''}/locales/{{lng}}/{{ns}}.json`,
 
       // path to post missing resources
-      addPath: `${process.env.PUBLIC_URL || ''}/locales/{{lng}}/{{ns}}`,
+      addPath: `${import.meta.env.PUBLIC_URL || ''}/locales/{{lng}}/{{ns}}`,
     },
 
     // have a common namespace used around the full app
     ns: ['translations', 'config'],
     defaultNS: 'translations',
 
-    debug: process.env.NODE_ENV === 'development',
+    debug: import.meta.env.NODE_ENV === 'development',
 
     interpolation: {
       escapeValue: false, // not needed for react!!

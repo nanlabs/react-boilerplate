@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import Loading from 'components/Loading';
-import { useGithubRepositoryQuery } from 'services/github';
+import Loading from '@/components/Loading';
+import { useGithubRepositoryQuery } from '@/services/github';
 import { RepositoryContainer } from './styles';
 
 type RepositoryProps = {

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { FixedContainer, Nav } from './styles';
-import useScroll from 'hooks/useScroll';
+import useScroll from '@/hooks/useScroll';
 import Desktop from './Desktop';
 import Mobile from './Mobile';
 import { links } from './domain/links';

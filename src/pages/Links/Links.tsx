@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
-import { Routes, generatePath } from 'routes/Routes';
+import { Routes, generatePath } from '@/routes/Routes';
 import { Link } from 'react-router-dom';
-import DefaultLayout from 'layouts/Default';
+import DefaultLayout from '@/layouts/Default';
 
 const links = [
   {

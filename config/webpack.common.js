@@ -55,6 +55,30 @@ const config = {
         use: [
           { loader: MiniCssWebpackPlugin.loader },
           { loader: 'css-loader', options: { importLoaders: 1, modules: { mode: 'icss' } } },
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                ident: 'postcss',
+                config: false,
+                plugins: [
+                  [
+                    'postcss-preset-env',
+                    {
+                      autoprefixer: {
+                        flexbox: 'no-2009',
+                      },
+                      stage: 3,
+                    },
+                  ],
+                  // Adds PostCSS Normalize as the reset css with default options,
+                  // so that it honors browserslist config in package.json
+                  // which in turn let's users customize the target behavior as per their needs.
+                  'postcss-normalize',
+                ],
+              },
+            },
+          },
         ],
       },
       {
@@ -65,6 +89,30 @@ const config = {
             loader: 'css-loader',
             options: { importLoaders: 1, modules: { mode: 'local', localIdentName: '[local]___[hash:base64:5]' } },
           },
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                ident: 'postcss',
+                config: false,
+                plugins: [
+                  [
+                    'postcss-preset-env',
+                    {
+                      autoprefixer: {
+                        flexbox: 'no-2009',
+                      },
+                      stage: 3,
+                    },
+                  ],
+                  // Adds PostCSS Normalize as the reset css with default options,
+                  // so that it honors browserslist config in package.json
+                  // which in turn let's users customize the target behavior as per their needs.
+                  'postcss-normalize',
+                ],
+              },
+            },
+          },
         ],
       },
       {
@@ -73,6 +121,30 @@ const config = {
         use: [
           { loader: MiniCssWebpackPlugin.loader },
           { loader: 'css-loader', options: { importLoaders: 1, modules: { mode: 'icss' } } },
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                ident: 'postcss',
+                config: false,
+                plugins: [
+                  [
+                    'postcss-preset-env',
+                    {
+                      autoprefixer: {
+                        flexbox: 'no-2009',
+                      },
+                      stage: 3,
+                    },
+                  ],
+                  // Adds PostCSS Normalize as the reset css with default options,
+                  // so that it honors browserslist config in package.json
+                  // which in turn let's users customize the target behavior as per their needs.
+                  'postcss-normalize',
+                ],
+              },
+            },
+          },
           'sass-loader',
         ],
       },
@@ -84,6 +156,30 @@ const config = {
             loader: 'css-loader',
             options: { importLoaders: 1, modules: { mode: 'local', localIdentName: '[local]___[hash:base64:5]' } },
           },
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                ident: 'postcss',
+                config: false,
+                plugins: [
+                  [
+                    'postcss-preset-env',
+                    {
+                      autoprefixer: {
+                        flexbox: 'no-2009',
+                      },
+                      stage: 3,
+                    },
+                  ],
+                  // Adds PostCSS Normalize as the reset css with default options,
+                  // so that it honors browserslist config in package.json
+                  // which in turn let's users customize the target behavior as per their needs.
+                  'postcss-normalize',
+                ],
+              },
+            },
+          },
           'sass-loader',
         ],
       },
@@ -93,6 +189,30 @@ const config = {
         use: [
           { loader: MiniCssWebpackPlugin.loader },
           { loader: 'css-loader', options: { importLoaders: 1, modules: { mode: 'icss' } } },
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                ident: 'postcss',
+                config: false,
+                plugins: [
+                  [
+                    'postcss-preset-env',
+                    {
+                      autoprefixer: {
+                        flexbox: 'no-2009',
+                      },
+                      stage: 3,
+                    },
+                  ],
+                  // Adds PostCSS Normalize as the reset css with default options,
+                  // so that it honors browserslist config in package.json
+                  // which in turn let's users customize the target behavior as per their needs.
+                  'postcss-normalize',
+                ],
+              },
+            },
+          },
           'less-loader',
         ],
       },
@@ -103,6 +223,30 @@ const config = {
           {
             loader: 'css-loader',
             options: { importLoaders: 1, modules: { mode: 'local', localIdentName: '[local]___[hash:base64:5]' } },
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                ident: 'postcss',
+                config: false,
+                plugins: [
+                  [
+                    'postcss-preset-env',
+                    {
+                      autoprefixer: {
+                        flexbox: 'no-2009',
+                      },
+                      stage: 3,
+                    },
+                  ],
+                  // Adds PostCSS Normalize as the reset css with default options,
+                  // so that it honors browserslist config in package.json
+                  // which in turn let's users customize the target behavior as per their needs.
+                  'postcss-normalize',
+                ],
+              },
+            },
           },
           'less-loader',
         ],

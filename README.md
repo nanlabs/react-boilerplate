@@ -30,13 +30,13 @@ Node 16.13.2
 Start development environment running
 
 ```sh
-$ npm run start
+npm run start
 ```
 
 Start development environment with docker running
 
 ```sh
-$ npm run docker:dev
+npm run docker:dev
 ```
 
 `docker:dev` generate a docker image named app and run it in a container. Run `docker:dev:start` for only start a container without build a new docker image
@@ -66,13 +66,13 @@ For **JavaScript** modules, a code change will trigger the application to re-ren
 Generate production files running
 
 ```sh
-$ npm run build
+npm run build
 ```
 
 Generate and serve production files running
 
 ```sh
-$ npm run serve
+npm run serve
 ```
 
 Available scripts:

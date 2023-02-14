@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import FullWidthLayout from 'layouts/FullWidth';
+import FullWidthLayout from '@/layouts/FullWidth';
 import classnames from 'classnames';
 import styles from './foo.module.css';
 import sass from './foo.module.scss';
