@@ -18,9 +18,15 @@
   "plugins": ["react", "jsx-a11y", "import", "jest"],
   "overrides": [
     {
-      "files": ["**/*.tsx"],
+      "files": ["**/*.ts", "**/*.tsx"],
       "rules": {
-        "react/prop-types": "off"
+        "react/prop-types": "off",
+        "no-restricted-imports": [
+          "error",
+          {
+            "patterns": ["@/features/*/*"]
+          }
+        ]
       }
     }
   ]
