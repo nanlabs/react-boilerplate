@@ -17,10 +17,10 @@ i18n
       // returning a path:
       // function(lngs, namespaces) { return customPath; }
       // the returned path will interpolate lng, ns if provided like giving a static path
-      loadPath: `${import.meta.env.BASE_PATH || ''}/locales/{{lng}}/{{ns}}.json`,
+      loadPath: `${import.meta.env.BASE_URL || ''}/locales/{{lng}}/{{ns}}.json`,
 
       // path to post missing resources
-      addPath: `${import.meta.env.BASE_PATH || ''}/locales/{{lng}}/{{ns}}`,
+      addPath: `${import.meta.env.BASE_URL || ''}/locales/{{lng}}/{{ns}}`,
     },
 
     // have a common namespace used around the full app
