@@ -11,5 +11,17 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src/'),
     },
-  }
+  },
+  esbuild: {
+    loader: 'tsx',
+    include: /src\/.*\.[tj]sx?$/,
+  },
+  optimizeDeps: {
+    esbuildOptions: {
+      loader: {
+        '.js': 'jsx',
+        '.ts': 'tsx',
+      },
+    },
+  },
 });
