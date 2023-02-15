@@ -1,20 +1,15 @@
-name: Deployment to GitHub Pages
+name: Main Validation
+
+concurrency:
+  group: main-check
+  cancel-in-progress: true
 
 on:
-  # call this workflow when the workflow Main Validation is completed after a push to main
-  workflow_run:
-    workflows:
-      - 'Main Validation'
-    branches:
-      - main
-    types:
-      - completed
+  workflow_call:
 
 jobs:
-  deploy:
+  test:
     runs-on: ubuntu-latest
-
-    concurrency: react-webpack-boilerplate
 
     steps:
       - name: Begin CI...
@@ -43,19 +38,5 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Make envfile
-        uses: SpicyPizza/create-envfile@v1
-        with:
-          file_name: .env
-          envkey_PUBLIC_URL: /react-webpack-boilerplate
-
-      - name: Build page
-        run: npm run build
-        env:
-          PUBLIC_URL: /react-webpack-boilerplate
-
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+      - name: Run linter validation
+        run: npm run lint
