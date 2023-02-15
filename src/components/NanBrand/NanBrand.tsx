@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 const WHITE = '#FFFFFF';
 const GREY = '#4A4A4A';
@@ -41,10 +40,6 @@ const NaNBrand = ({ inverse = false }) => {
       />
     </svg>
   );
-};
-
-NaNBrand.propTypes = {
-  inverse: PropTypes.bool,
 };
 
 export default NaNBrand;

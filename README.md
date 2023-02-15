@@ -59,7 +59,7 @@ Available scripts:
 | `npm run <script>` | Description                                                                                                 |
 | ------------------ | ----------------------------------------------------------------------------------------------------------- |
 | `preview`          | Serves your app using your production ready setup (`.env.production` and `NODE_ENV` equals to `production`) |
-| `build`            | Builds the application to ./build                                                                           |
+| `build`            | Builds the application to `dist/`                                                                           |
 
 ## Testing
 

@@ -1,5 +1,5 @@
-import translations from '@/assets/locales/en/translations.json';
-import config from '@/assets/locales/en/config.json';
+import translations from '../../../public/locales/en/translations.json';
+import config from '../../../public/locales/en/config.json';
 
 const resources = {
   en: {

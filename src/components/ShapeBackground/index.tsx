@@ -11,7 +11,7 @@ const red = '#f56565';
 
 const ShapeBackground = () => {
   const windowSize = useWindowSize();
-  const showRightShapes = windowSize.width > 1200;
+  const showRightShapes = (windowSize.width ?? 0) > 1200;
 
   return (
     <Root>

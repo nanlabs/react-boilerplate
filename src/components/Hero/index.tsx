@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../assets/images/react.svg';
+import logo from '@/assets/images/react.svg';
 import NanLabsIcon from '@/components/NanLabsIcon';
 import ShapeBackground from '@/components/ShapeBackground';
 import useWindowSize from '@/hooks/useWindowSize';
@@ -17,7 +17,7 @@ import {
 
 const Hero = () => {
   const windowSize = useWindowSize();
-  const showIllustration = windowSize.width > 1200;
+  const showIllustration = (windowSize.width ?? 0) > 1200;
 
   return (
     <Root>

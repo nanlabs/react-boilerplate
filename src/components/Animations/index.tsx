@@ -36,14 +36,26 @@ export const upDownWideAnimation = css`
   animation: ${upDownWide} 15s ease-in-out infinite alternate;
 `;
 
-export const UpDown = styled.div`
+export type UpDownProps = {
+  animationDuration?: string;
+  animationDirection?: string;
+};
+
+export const UpDown = styled.div<UpDownProps>`
   ${upDownAnimation};
   position: relative;
-  ${(props) => props}
+  ${({ animationDuration }) => animationDuration && `animation-duration: ${animationDuration}`};
+  ${({ animationDirection }) => animationDirection && `animation-direction: ${animationDirection}`};
 `;
 
-export const UpDownWide = styled.div`
+export type UpDownWideProps = {
+  animationDuration?: string;
+  animationDirection?: string;
+};
+
+export const UpDownWide = styled.div<UpDownWideProps>`
   ${upDownWideAnimation};
   position: relative;
-  ${(props) => props}
+  ${({ animationDuration }) => animationDuration && `animation-duration: ${animationDuration}`};
+  ${({ animationDirection }) => animationDirection && `animation-direction: ${animationDirection}`};
 `;

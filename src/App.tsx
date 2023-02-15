@@ -6,7 +6,7 @@ import '@/theme';
 import Loading from '@/components/Loading';
 import AppRoutes from '@/routes/AppRoutes';
 import ReactQueryProvider from '@/providers/ReactQueryProvider';
-import { toggleTheme } from '@/utils/utils';
+import { toggleTheme } from '@/utils';
 
 window.toggleTheme = toggleTheme;
 

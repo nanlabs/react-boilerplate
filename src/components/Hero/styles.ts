@@ -71,12 +71,43 @@ export const IllustrationContainer = styled.div`
   position: absolute;
 `;
 
-export const Image = styled.img`
-  position: absolute;
+export type ImageProps = {
+  width?: string;
+  height?: string;
+  top?: string;
+  left?: string;
+  right?: string;
+  bottom?: string;
+  position?: string;
+};
+
+export const Image = styled.img<ImageProps>`
   z-index: 10;
+  ${({ width }) => width && `width: ${width};`}
+  ${({ height }) => height && `height: ${height};`}
+  ${({ top }) => top && `top: ${top};`}
+  ${({ left }) => left && `left: ${left};`}
+  ${({ right }) => right && `right: ${right};`}
+  ${({ bottom }) => bottom && `bottom: ${bottom};`}
+  ${({ position = 'absolute' }) => `position: ${position};`}
 `;
 
-export const ImageContainer = styled.div`
+export type ImageContainerProps = {
+  width?: string;
+  height?: string;
+  top?: string;
+  left?: string;
+  right?: string;
+  bottom?: string;
+};
+
+export const ImageContainer = styled.div<ImageContainerProps>`
   position: absolute;
   z-index: 10;
+  ${({ width }) => width && `width: ${width};`}
+  ${({ height }) => height && `height: ${height};`}
+  ${({ top }) => top && `top: ${top};`}
+  ${({ left }) => left && `left: ${left};`}
+  ${({ right }) => right && `right: ${right};`}
+  ${({ bottom }) => bottom && `bottom: ${bottom};`}
 `;
