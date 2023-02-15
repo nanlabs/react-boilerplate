@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from 'utils/test/test-utils';
+import { render, screen } from '@/test-utils';
 import Button from './Button';
 
 test('simple Button test', async () => {

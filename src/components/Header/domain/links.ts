@@ -1,5 +1,5 @@
 import { TFunction } from 'i18next';
-import { Routes } from 'routes/Routes';
+import { Routes } from '@/routes/Routes';
 
 export type NavLinkProp = {
   to: string;

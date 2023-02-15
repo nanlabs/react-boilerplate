@@ -1,12 +1,12 @@
 import React, { FC, Suspense } from 'react';
 import { HashRouter } from 'react-router-dom';
 
-import 'theme';
+import '@/theme';
 
-import Loading from 'components/Loading';
-import AppRoutes from 'routes/AppRoutes';
-import ReactQueryProvider from 'providers/ReactQueryProvider';
-import { toggleTheme } from 'utils/utils';
+import Loading from '@/components/Loading';
+import AppRoutes from '@/routes/AppRoutes';
+import ReactQueryProvider from '@/providers/ReactQueryProvider';
+import { toggleTheme } from '@/utils';
 
 window.toggleTheme = toggleTheme;
 

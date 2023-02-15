@@ -1,85 +1,17 @@
 name: Deployment to GitHub Pages
 
 on:
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-  push:
+  # call this workflow when the workflow Main Validation is completed after a push to main
+  workflow_run:
+    workflows:
+      - 'Main Validation'
     branches:
       - main
+    types:
+      - completed
 
 jobs:
-  linter:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Begin CI...
-        uses: actions/checkout@v3
-        with:
-          persist-credentials: false
-
-      - name: Use Node ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16.13.1'
-
-      - name: Get npm cache directory
-        id: npm-cache-dir
-        run: |
-          echo "::set-output name=dir::$(npm config get cache)"
-
-      - uses: actions/cache@v3
-        id: npm-cache # use this to check for `cache-hit` ==> if: steps.npm-cache.outputs.cache-hit != 'true'
-        with:
-          path: ${{ steps.npm-cache-dir.outputs.dir }}
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run linter validation
-        run: npm run lint
-
-  test:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Begin CI...
-        uses: actions/checkout@v3
-        with:
-          persist-credentials: false
-
-      - name: Use Node ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16.13.1'
-
-      - name: Get npm cache directory
-        id: npm-cache-dir
-        run: |
-          echo "::set-output name=dir::$(npm config get cache)"
-
-      - uses: actions/cache@v3
-        id: npm-cache # use this to check for `cache-hit` ==> if: steps.npm-cache.outputs.cache-hit != 'true'
-        with:
-          path: ${{ steps.npm-cache-dir.outputs.dir }}
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run tests
-        run: npm run test
-
   deploy:
-    needs:
-      - linter
-      - test
-
     runs-on: ubuntu-latest
 
     concurrency: react-webpack-boilerplate
@@ -93,7 +25,7 @@ jobs:
       - name: Use Node ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
-          node-version: '16.13.1'
+          node-version-file: .node-version
 
       - name: Get npm cache directory
         id: npm-cache-dir
@@ -126,4 +58,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          publish_dir: ./dist

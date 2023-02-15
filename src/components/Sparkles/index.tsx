@@ -1,6 +1,6 @@
-import React, { CSSProperties, FC, ReactNode } from 'react';
-import { random, range } from 'utils/utils';
-import useRandomInterval from 'hooks/useRandomInterval';
+import React, { CSSProperties, FC, ReactNode, useState } from 'react';
+import { random, range } from '@/utils';
+import useRandomInterval from '@/hooks/useRandomInterval';
 import { ChildWrapper, SparkleSvg, SparkleWrapper, Wrapper } from './styles';
 
 const DEFAULT_COLOR = '#FFC700';
@@ -43,7 +43,7 @@ type SparklesProps = {
 };
 
 const Sparkles: FC<SparklesProps> = ({ colors = [DEFAULT_COLOR], children, ...delegated }) => {
-  const [sparkles, setSparkles] = React.useState(() => {
+  const [sparkles, setSparkles] = useState(() => {
     return range(1, 3).map(() => generateSparkle(pickColor(colors)));
   });
   useRandomInterval(

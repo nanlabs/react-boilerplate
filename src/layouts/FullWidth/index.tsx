@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react';
-import Header from 'components/Header';
+import Header from '@/components/Header';
 import { Root, Main } from './styles';
 
 type FullWidthLayoutProps = {

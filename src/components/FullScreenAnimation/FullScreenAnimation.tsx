@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import Cracked from 'components/Animation/Cracked';
+import Cracked from '@/components/Animation/Cracked';
 
 import { Root, AnimationContainer } from './styles';
 

@@ -2,9 +2,9 @@ import React, { FC } from 'react';
 import { NavContainer, Brand, MobileContainer, NavList, NavItem, HiddenMenuInput, LabelMenu } from './styles';
 import { useTranslation } from 'react-i18next';
 import { Link, NavLink } from 'react-router-dom';
-import { Routes } from 'routes/Routes';
-import NanBrand from 'components/NanBrand';
-import type { NavLinkProp } from 'components/Header/domain/links';
+import { Routes } from '@/routes/Routes';
+import NanBrand from '@/components/NanBrand';
+import type { NavLinkProp } from '@/components/Header/domain/links';
 import { Divide as Hamburger } from 'hamburger-react';
 
 type MobileNavProps = {

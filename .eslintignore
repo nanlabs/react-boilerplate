@@ -1,6 +1,13 @@
-/config/
-/build/
-/public/
-/node_modules/
+node_modules/
+
+# Ignore artifacts:
+coverage/
+dist/
+public/
+__mocks__/
+
+jest.config.js
+postcss.config.js
+*.d.ts
+
 /src/theme/
-webpack.config.js

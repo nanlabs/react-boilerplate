@@ -4,7 +4,7 @@
  *  to configure BASE_URL in the .env file.
  *
  */
-import { get } from 'libs/http';
+import { get } from '@/libs/http';
 import { useQuery } from 'react-query';
 
 const GITHUB_REPO_API = 'https://api.github.com/repos/';
