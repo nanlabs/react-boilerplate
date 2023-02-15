@@ -14,7 +14,8 @@ jobs:
   deploy:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
-    concurrency: react-webpack-boilerplate
+    concurrency: react-webpack-boilerplate-deployment
+    environment: production
     steps:
       - name: Begin CI...
         uses: actions/checkout@v3
