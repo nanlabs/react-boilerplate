@@ -10,5 +10,4 @@ export const Root = styled.div`
 export const ShapeWrapper = styled.div`
   display: block;
   position: absolute;
-  ${(props) => props};
 `;

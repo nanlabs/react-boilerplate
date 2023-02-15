@@ -1,6 +1,12 @@
 import styled from 'styled-components';
 
-export const RingShape = styled.div`
+export type RingShapeProps = {
+  size?: string;
+  color?: string;
+  ring?: string;
+};
+
+export const RingShape = styled.div<RingShapeProps>`
   position: relative;
   background-color: transparent;
   z-index: 1;
@@ -11,7 +17,6 @@ export const RingShape = styled.div`
   width: ${(props) => props.size || '100px'};
   border-color: ${(props) => props.color || 'teal'};
   border-width: ${(props) => props.ring || '20px'};
-  ${(props) => props};
 `;
 
 export default RingShape;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from 'utils/test/test-utils';
+import { render, screen } from '@/utils/test/test-utils';
 import Header from './Desktop';
 import { links } from './domain/links';
 

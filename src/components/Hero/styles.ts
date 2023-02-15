@@ -70,11 +70,9 @@ export const IllustrationContainer = styled.div`
 export const Image = styled.img`
   position: absolute;
   z-index: 10;
-  ${(props) => props};
 `;
 
 export const ImageContainer = styled.div`
   position: absolute;
   z-index: 10;
-  ${(props) => props};
 `;

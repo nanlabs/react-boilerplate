@@ -2,7 +2,7 @@ import React, { FC, ReactElement } from 'react';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import { render, RenderOptions } from '@testing-library/react';
 
-import 'utils/test/i18n';
+import '@/utils/test/i18n';
 
 /**
  *
