@@ -27,7 +27,11 @@ export const HeroContainer = styled.div`
   }
 `;
 
-export const TextContainer = styled.div`
+export type TextContainerProps = {
+  fullWidth?: boolean;
+};
+
+export const TextContainer = styled.div<TextContainerProps>`
   display: flex;
   width: ${(props) => (props.fullWidth ? '100%' : '50%')};
   flex-direction: column;
