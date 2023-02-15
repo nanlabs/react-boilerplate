@@ -1,9 +1,5 @@
 name: Pull Request Validation
 
-concurrency:
-  group: pull_request_${{ github.event.number }}
-  cancel-in-progress: true
-
 on:
   workflow_call:
 

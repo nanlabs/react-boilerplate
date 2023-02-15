@@ -1,8 +1,4 @@
-name: Main Validation
-
-concurrency:
-  group: main-check
-  cancel-in-progress: true
+name: Lint
 
 on:
   workflow_call:

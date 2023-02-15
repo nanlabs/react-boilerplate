@@ -1,7 +1,7 @@
 name: Main Validation
 
 concurrency:
-  group: main-check
+  group: ci-${{ github.event.number }}
   cancel-in-progress: true
 
 on:
