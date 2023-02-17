@@ -3,6 +3,7 @@ node_modules/
 # Ignore artifacts:
 coverage/
 dist/
+dev-dist/
 public/
 __mocks__/
 
