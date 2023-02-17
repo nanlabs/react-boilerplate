@@ -4,12 +4,12 @@
 </div>
 <div align="center">
 
-[![Main Validation](https://github.com/nanlabs/react-webpack-boilerplate/actions/workflows/ci.yml/badge.svg)](https://github.com/nanlabs/react-webpack-boilerplate/actions/workflows/ci.yml)
-[![Deployment to GitHub Pages](https://github.com/nanlabs/react-webpack-boilerplate/actions/workflows/deployment.yml/badge.svg)](https://github.com/nanlabs/react-webpack-boilerplate/actions/workflows/deployment.yml)
+[![Main Validation](https://github.com/nanlabs/react-boilerplate/actions/workflows/ci.yml/badge.svg)](https://github.com/nanlabs/react-boilerplate/actions/workflows/ci.yml)
+[![Deployment to GitHub Pages](https://github.com/nanlabs/react-boilerplate/actions/workflows/deployment.yml/badge.svg)](https://github.com/nanlabs/react-boilerplate/actions/workflows/deployment.yml)
 [![License: MIT][licensebadge]][licenseurl]
 
 [licensebadge]: https://img.shields.io/badge/License-MIT-blue.svg
-[licenseurl]: https://github.com/nanlabs/react-webpack-boilerplate/master/LICENSE
+[licenseurl]: https://github.com/nanlabs/react-boilerplate/master/LICENSE
 
 </div>
 
