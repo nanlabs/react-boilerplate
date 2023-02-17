@@ -16,7 +16,7 @@ const DesktopNav: FC<DesktopNavProps> = ({ links }) => {
   const { t } = useTranslation(['config', 'translations']);
   return (
     <NavContainer className="desktop-nav">
-      <Link to={Routes.ROOT}>
+      <Link to={Routes.ROOT} aria-label="Home" data-testid="home-link">
         <Brand>
           <NanBrand />
         </Brand>

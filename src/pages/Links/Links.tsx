@@ -34,7 +34,9 @@ const Links: FC = () => {
       <hr></hr>
       {links.map((link) => (
         <li key={link.path}>
-          <Link to={link.path}>{link.name}</Link>
+          <Link to={link.path} aria-label={link.name} data-testid={`${link.name}-link`}>
+            {link.name}
+          </Link>
         </li>
       ))}
     </DefaultLayout>

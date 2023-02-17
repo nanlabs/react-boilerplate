@@ -16,7 +16,7 @@ const MobileNav: FC<MobileNavProps> = ({ links }) => {
 
   return (
     <NavContainer className="mobile-nav">
-      <Link style={{ zIndex: 1001 }} to={Routes.ROOT}>
+      <Link style={{ zIndex: 1001 }} to={Routes.ROOT} aria-label="Home" data-testid="home-link">
         <Brand>
           <NanBrand />
         </Brand>
