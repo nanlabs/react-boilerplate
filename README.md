@@ -1,5 +1,5 @@
 <div align="center">
-<h1>React Webpack Boilerplate</h1>
+<h1>React Boilerplate</h1>
 
 </div>
 <div align="center">
