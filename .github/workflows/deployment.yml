@@ -47,12 +47,12 @@ jobs:
         uses: SpicyPizza/create-envfile@v1
         with:
           file_name: .env
-          envkey_BASE_URL: /react-boilerplate/
+          envkey_VITE_APP_BASE_URL: /react-boilerplate/
 
       - name: Build page
         run: npm run build
         env:
-          BASE_URL: /react-boilerplate/
+          VITE_APP_BASE_URL: /react-boilerplate/
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
