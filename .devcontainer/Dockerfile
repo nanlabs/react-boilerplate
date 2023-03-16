@@ -6,4 +6,4 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends jq
 
 ARG EXTRA_NODE_VERSION=16
-RUN su node -c "source /usr/local/share/nvm/nvm.sh && nvm install ${EXTRA_NODE_VERSION}"
+RUN su node -c "source /usr/local/share/nvm/nvm.sh && nvm ls-remote && nvm install ${EXTRA_NODE_VERSION}"
